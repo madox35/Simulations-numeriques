@@ -17,7 +17,7 @@ function main()
     Yn = centrerReduire(Xi, borneA, borneB, 1000);
     
     if AFFICHER_HISTO then
-        histplot(10,Yn);
+        histplot(50,Yn);
         tracerDensiteNormale(-5, 5)
     end
     
