@@ -32,6 +32,7 @@ function main()
     lambda = n*p;
     Xi = genererRandBinomiale(n,p);
     
+    
 
     if AFFICHER_HISTO then
 //        histplot(50,Yn);
