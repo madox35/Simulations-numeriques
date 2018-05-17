@@ -1,3 +1,3 @@
 function Xi = genererRandBinomiale(n,p)
-    Xi = grand(1000,1,'bin',n,p);
+    Xi = grand(1,1000,'bin',n,p);
 endfunction
