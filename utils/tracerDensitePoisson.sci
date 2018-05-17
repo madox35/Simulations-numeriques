@@ -1,0 +1,3 @@
+function tracerDensitePoisson(lambda)
+    
+endfunction
