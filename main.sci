@@ -26,18 +26,22 @@ function main()
 //    Yn = centrerReduireExpo(Xi,1/lambda, 1/(lambda^2), 1000);
 
 //   Partie 2
-    n = 1000;
-    p = 0.5;
-    lambda = n*p;
-    Xi = genererRandBinomiale(n,p);
+//    n = 1000;
+//    p = 0.5;
+//    lambda = n*p;
+//    Xi = genererRandBinomiale(n,p);
     
-    if AFFICHER_HISTO then
+//    if AFFICHER_HISTO then
 //        histplot(50,Yn);
 //        tracerDensiteNormale(-5, 5)
 
-        histplot(50,Xi);
-        tracerDensitePoisson(min(Xi), max(Xi), lambda);
-    end
+//        histplot(50,Xi);
+//        tracerDensitePoisson(min(Xi), max(Xi), lambda);
+
+
+//     Exercice 2
+    Xi = genererRandExpo(1);
+    Xn_barre = recupererEsperance(Xi, 1000);
     
 endfunction
 
