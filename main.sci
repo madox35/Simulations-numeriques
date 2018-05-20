@@ -5,10 +5,10 @@ global AFFICHER_HISTO
 AFFICHER_HISTO = %t;
 
 global AFFICHER_EXO1;
-AFFICHER_EXO1 = %t;
+AFFICHER_EXO1 = %f;
 
 global AFFICHER_EXO2;
-AFFICHER_EXO2 = %f;
+AFFICHER_EXO2 = %t;
 
 global AFFICHER_EXO3;
 AFFICHER_EXO3 = %f;
@@ -46,7 +46,7 @@ function main()
     if AFFICHER_EXO2 then
 
         // Exercice 2
-        lambda = 1;
+        lambda = 0.5;
         Xn_barre = recupererEsperance(lambda,1000);
         plot2d(Xn_barre);
     end
