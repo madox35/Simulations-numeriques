@@ -8,10 +8,10 @@ global AFFICHER_EXO1;
 AFFICHER_EXO1 = %f;
 
 global AFFICHER_EXO2;
-AFFICHER_EXO2 = %t;
+AFFICHER_EXO2 = %f;
 
 global AFFICHER_EXO3;
-AFFICHER_EXO3 = %f;
+AFFICHER_EXO3 = %t;
 
 function main()
     clc; clf();
@@ -60,8 +60,9 @@ function main()
     if AFFICHER_EXO3 then
     
         // Exercice 3
-        //
-        genererRand
+        
+        marche = marcheAleatoire(20, 1, 1);
+        plot2d(marche)
     end
    
 endfunction
