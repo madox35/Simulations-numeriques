@@ -6,5 +6,4 @@ function [Xn] = recupererEsperance(lambda, N)
         Xi = grand(i,1,'exp', esp);
         Xn(i) = (1/i)*sum(Xi);
     end
-    plot2d(Xn);
 endfunction

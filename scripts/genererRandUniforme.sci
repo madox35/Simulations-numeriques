@@ -1,3 +1,3 @@
-function Xi = genererRandUniforme(borneA,borneB)
-    Xi = grand(1000,1000,'unf',borneA,borneB);    
+function Xi = genererRandUniforme(borneA,borneB, iter)
+    Xi = grand(iter,1,'unf',borneA,borneB);    
 endfunction

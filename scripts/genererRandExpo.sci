@@ -1,3 +1,3 @@
-function Xi = genererRandExpo(lambda)
-    Xi = grand(1000,1000,'exp',1/lambda);
+function Xi = genererRandExpo(lambda, iter)
+    Xi = grand(iter,1,'exp',1/lambda);
 endfunction

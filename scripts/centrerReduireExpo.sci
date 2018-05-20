@@ -1,8 +1,9 @@
-function [Y] = centrerReduireExpo(Xi, esperance, var, N)
+function [Y] = centrerReduireExpo(lambda, N)
     
-    [K,L] = size(Xi);
-   
-   for i=1:N
-       Y(i)= (sum(Xi(:,i))-K*esperance)/(sqrt(K)*sqrt(var));
-   end
+    esperance = 1/lambda;
+    var = 1/(lambda^2);
+    for i=1:N
+        Xi= genererRandExpo(lambda, i);
+        Y(i)= (sum(Xi)-i*esperance)/(sqrt(i)*sqrt(var));
+    end
 endfunction

@@ -1,3 +1,4 @@
-function Xi = genererRandBinomiale(n,p)
-    Xi = grand(1000,1000,'bin',n,p);
+function Xi = genererRandBinomiale(n,p, iter)
+    // On génère "iter" lignes sur une colonne de v.a suivant la loi Binomiale
+    Xi = grand(iter,1,'bin',n,p);
 endfunction

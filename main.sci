@@ -1,8 +1,17 @@
 funcprot(0);
 
-CHEMIN = 'C:\Users\CookieV3\Desktop\Simulations numeriques\';
+CHEMIN = 'C:\Users\Hugo Jové (sécurité)\Desktop\Simulations-numeriques';
 global AFFICHER_HISTO
 AFFICHER_HISTO = %t;
+
+global AFFICHER_EXO1;
+AFFICHER_EXO1 = %t;
+
+global AFFICHER_EXO2;
+AFFICHER_EXO2 = %f;
+
+global AFFICHER_EXO3;
+AFFICHER_EXO3 = %f;
 
 function main()
     clc; clf();
@@ -10,43 +19,44 @@ function main()
     getd('utils');
     getd('scripts');
 
+    if AFFICHER_EXO1 then
+        //   Partie 1
+        //   Q1
+//        Yn = centrerReduireUnif(1000);
+         
+        //  Q2
+//        lambda=1;
+//        Yn = centrerReduireExpo(lambda, 1000);  
 
-//   Partie 1
-//   Q1
-//    borneA = -1;
-//    borneB = 1;
-//    Xi = genererRandUniforme(borneA, borneB);
-//  Maximum 1000 car la fonction de génération a été manuellement limité à 1000 colonnes (Xi).
-//    Yn = centrerReduire(Xi, borneA, borneB, 1000);
+//    //   Partie 2
+        n = 1000;
+        p = 0.5;
+        lambda = n*p;
+        Xi = genererRandBinomiale(n,p,10000);
+//        
+        if AFFICHER_HISTO then
+//            histplot(50,Yn);
+//            tracerDensiteNormale(-5, 5)
     
+            histplot(50,Xi);
+            tracerDensitePoisson(min(Xi), max(Xi), lambda);
+        end
+    end
     
-//  Q2
-//    lambda=1.1;
-//    Xi= genererRandExpo(lambda);
-//    Yn = centrerReduireExpo(Xi,1/lambda, 1/(lambda^2), 1000);
-
-//   Partie 2
-//    n = 1000;
-//    p = 0.5;
-//    lambda = n*p;
-//    Xi = genererRandBinomiale(n,p);
-    
-//    if AFFICHER_HISTO then
-//        histplot(50,Yn);
-//        tracerDensiteNormale(-5, 5)
-
-//        histplot(50,Xi);
-//        tracerDensitePoisson(min(Xi), max(Xi), lambda);
-
+    if AFFICHER_EXO2 then
 
 //     Exercice 2
-//    lambda = 1;
-//    Xn_barre = recupererEsperance(lambda,1000);
-    
+        lambda = 1;
+        Xn_barre = recupererEsperance(lambda,1000);
+        plot2d(Xn_barre);
+    end
 
-//      Exercice 3
-
+    if AFFICHER_EXO3 then
     
+    //      Exercice 3
+        generer
+    end
+   
 endfunction
 
 main()
