@@ -29,10 +29,10 @@ function main()
 //        Yn = centrerReduireExpo(lambda, 1000);  
 
 //    //   Partie 2
-        n = 1000;
-        p = 0.5;
+        n = 100;
+        p = 0.03;
         lambda = n*p;
-        Xi = genererRandBinomiale(n,p,10000);
+        Xi = genererRandBinomiale(n,p,1000);
 //        
         if AFFICHER_HISTO then
 //            histplot(50,Yn);
@@ -45,10 +45,16 @@ function main()
     
     if AFFICHER_EXO2 then
 
-        // Exercice 2
-        lambda = 0.5;
-        Xn_barre = recupererEsperance(lambda,1000);
-        plot2d(Xn_barre);
+        // Exercice 2 pour 1 réalisation
+//        Xn_barre = moyenneEmpirique(500);
+//        plot2d(Xn_barre);
+        
+        // Exercice 2 pour plusieurs réalisations
+        for i=1:50
+            Xn_barre = moyenneEmpirique(500);
+            plot2d(Xn_barre);
+        end
+          
     end
 
     if AFFICHER_EXO3 then
