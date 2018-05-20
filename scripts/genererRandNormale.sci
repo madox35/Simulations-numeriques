@@ -1,3 +1,3 @@
-function Xi = genererRandNormale(moyenne,sigma)
-    Xi = grand(10000,1,'nor',moyenne,sigma);
+function Xi = genererRandNormale(moyenne,sigma, iter)
+    Xi = grand(iter,1,'nor',moyenne,sigma);
 endfunction

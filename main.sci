@@ -45,7 +45,7 @@ function main()
     
     if AFFICHER_EXO2 then
 
-//     Exercice 2
+        // Exercice 2
         lambda = 1;
         Xn_barre = recupererEsperance(lambda,1000);
         plot2d(Xn_barre);
@@ -53,8 +53,9 @@ function main()
 
     if AFFICHER_EXO3 then
     
-    //      Exercice 3
-        generer
+        // Exercice 3
+        //
+        genererRand
     end
    
 endfunction
