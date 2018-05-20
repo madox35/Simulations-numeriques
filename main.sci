@@ -40,8 +40,12 @@ function main()
 
 
 //     Exercice 2
-    Xi = genererRandExpo(1);
-    Xn_barre = recupererEsperance(Xi, 1000);
+//    lambda = 1;
+//    Xn_barre = recupererEsperance(lambda,1000);
+    
+
+//      Exercice 3
+
     
 endfunction
 

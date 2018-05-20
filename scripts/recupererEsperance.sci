@@ -1,8 +1,10 @@
-function [y] = recupererEsperance(Xi,N)
-    x= 0:1000;
-    for i=1:N
-        y(i)= 1/N * (sum(Xi(:,i)));
+function [Xn] = recupererEsperance(lambda, N)
+
+    esp = 1/lambda;
+    for i=1:N   
+        // On génère i lignes sur une colonne de v.a suivant la loi expo
+        Xi = grand(i,1,'exp', esp);
+        Xn(i) = (1/i)*sum(Xi);
     end
-    
-    plot2d(x,y,rect=[0, 0,100,100]);
+    plot2d(Xn);
 endfunction
