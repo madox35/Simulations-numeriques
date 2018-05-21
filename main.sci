@@ -74,12 +74,12 @@ function main()
 //            plot2d(marche3)
 //        end
 
-        marche4 = marcheAleatoireReduc(10000,1,1);
-        plot2d(marche4);
-//        for i=1:1000
-//            marche4 = marcheAleatoireReduc(10000,1,1);
-//            plot2d(marche4);
-//        end
+//        marche4 = marcheAleatoireReduc(10000,1,1);
+//        plot2d(marche4);
+        for i=1:200
+            marche4 = marcheAleatoireReduc(10000,1,1);
+            plot2d(marche4);
+        end
      end
    
 endfunction
