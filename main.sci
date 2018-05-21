@@ -61,15 +61,26 @@ function main()
     
         // Exercice 3
         
-        marche1 = marcheAleatoire(20, 1, 1);
+//        marche1 = marcheAleatoire(20, 1, 1);
 //        plot2d(marche1)
-        marche2 = marcheAleatoire(100, 1, 1);
+
+//        marche2 = marcheAleatoire(100, 1, 1);
 //        plot2d(marche2)
-        marche3 = marcheAleatoire(1000, 1, 1);        
+
+//        marche3 = marcheAleatoire(1000, 1, 1);        
 //        plot2d(marche3)
-        
-        
-    end
+//        for i=1:1000
+//            marche3 = marcheAleatoire(1000, 1, 1);
+//            plot2d(marche3)
+//        end
+
+        marche4 = marcheAleatoireReduc(10000,1,1);
+        plot2d(marche4);
+//        for i=1:1000
+//            marche4 = marcheAleatoireReduc(10000,1,1);
+//            plot2d(marche4);
+//        end
+     end
    
 endfunction
 
