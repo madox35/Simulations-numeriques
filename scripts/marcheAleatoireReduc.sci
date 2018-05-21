@@ -11,5 +11,8 @@ function marche = marcheAleatoireReduc(nombre_pas, T, s)
         end
         marche(i) = sum(tabPas);
         alpha = alpha - alpha/1000;
+//        if i == 10000 then
+//            disp(alpha)
+//        end
     end
 endfunction

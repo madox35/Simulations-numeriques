@@ -36,7 +36,7 @@ function main()
 //        
         if AFFICHER_HISTO then
 //            histplot(50,Yn);
-//            tracerDensiteNormale(-5, 5)
+//            tracerDensiteNormale(1000,0,1)
     
             histplot(50,Xi);
             tracerDensitePoisson(min(Xi), max(Xi), lambda);
@@ -78,8 +78,13 @@ function main()
 //        plot2d(marche4);
         for i=1:200
             marche4 = marcheAleatoireReduc(10000,1,1);
-            plot2d(marche4);
+            res(i) = marche4($)
         end
+    
+        histplot(50, res);
+        // alpha vaut 0.0000452 après 10 000 pas
+        alpha = 0.0000452;
+        tracerDensiteNormale(1000, 0, sqrt(alpha));
      end
    
 endfunction
